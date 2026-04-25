@@ -16,6 +16,9 @@
 
   <!-- Custom styles for this template -->
   <link href="assets/style.css" rel="stylesheet">
+  <link href="assets/conversor.css" rel="stylesheet">
+  
+  
 </head>
 
 <body>
@@ -47,15 +50,35 @@
   </header>
 
   <!-- Begin page content -->
-  <main role="main" class="container">
-    <h1 class="mt-5">Gerenciamos moedas como niguém</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-      laborum.</p>
-    <p>Navegue para o melhor<a" href="/conversor.html">conversor monetário</a>já inventado pela humanidade.</p>
-
+  <main role="main" class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card p-4" style= "width: 100%; max-width: 400px; border-radius: 15px;">
+      <form id="Conversor-form">
+        <div class="form-group">
+          <label for="valor">Valor</label>
+          <input type="number" class="form-control" id="valor" placeholder="Digite o valor" required>
+        </div>
+        <div class="form-group">
+          <label for="moedaOrigem">Moeda de Origem</label>
+          <select class="form-control" id="moedaOrigem" required>
+            <option value="">Selecione a moeda</option>
+            <option value="USD">Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="BRL">Real (BRL)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="moedaDestino">Moeda de destino</label>
+          <select class="form-control" id="moedaOrigem" required>
+            <option value="">Selecione a moeda</option>
+            <option value="USD">Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="BRL">Real (BRL)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-dark btn-block">Converter</button>
+      </form>
+      <div id="Resultado" class="mt-3 text-center">POR ENQUANTO NADA</div>
+    </div>
   </main>
 
   <footer class="footer">
